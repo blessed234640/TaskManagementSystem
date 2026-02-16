@@ -33,6 +33,42 @@
             "related": ".pdb;.xml"
           }
         }
+      },
+      "Task.net.Application/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Task.net.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Task.net.Application.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Task.net.Application.dll": {}
+        }
+      },
+      "Task.net.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/Task.net.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Task.net.Domain.dll": {}
+        }
+      },
+      "Task.net.Infrastructure/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Task.net.Application": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Task.net.Infrastructure.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Task.net.Infrastructure.dll": {}
+        }
       }
     }
   },
@@ -67,11 +103,28 @@
         "microsoft.openapi.1.6.17.nupkg.sha512",
         "microsoft.openapi.nuspec"
       ]
+    },
+    "Task.net.Application/1.0.0": {
+      "type": "project",
+      "path": "../Application/Task.net.Application.csproj",
+      "msbuildProject": "../Application/Task.net.Application.csproj"
+    },
+    "Task.net.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Domain/Task.net.Domain.csproj",
+      "msbuildProject": "../Domain/Task.net.Domain.csproj"
+    },
+    "Task.net.Infrastructure/1.0.0": {
+      "type": "project",
+      "path": "../Infrastructure/Task.net.Infrastructure.csproj",
+      "msbuildProject": "../Infrastructure/Task.net.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net9.0": [
-      "Microsoft.AspNetCore.OpenApi >= 9.0.10"
+      "Microsoft.AspNetCore.OpenApi >= 9.0.10",
+      "Task.net.Application >= 1.0.0",
+      "Task.net.Infrastructure >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -98,7 +151,14 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Victus\\OneDrive\\Рабочий стол\\.net\\Task.net\\src\\Application\\Task.net.Application.csproj": {
+              "projectPath": "C:\\Users\\Victus\\OneDrive\\Рабочий стол\\.net\\Task.net\\src\\Application\\Task.net.Application.csproj"
+            },
+            "C:\\Users\\Victus\\OneDrive\\Рабочий стол\\.net\\Task.net\\src\\Infrastructure\\Task.net.Infrastructure.csproj": {
+              "projectPath": "C:\\Users\\Victus\\OneDrive\\Рабочий стол\\.net\\Task.net\\src\\Infrastructure\\Task.net.Infrastructure.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net9.0": {}
+    "net9.0": {
+      "Task.net.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "compile": {
+          "bin/placeholder/Task.net.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Task.net.Domain.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Task.net.Domain/1.0.0": {
+      "type": "project",
+      "path": "../Domain/Task.net.Domain.csproj",
+      "msbuildProject": "../Domain/Task.net.Domain.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net9.0": []
+    "net9.0": [
+      "Task.net.Domain >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Victus\\.nuget\\packages\\": {}
@@ -31,7 +50,11 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Victus\\OneDrive\\Рабочий стол\\.net\\Task.net\\src\\Domain\\Task.net.Domain.csproj": {
+              "projectPath": "C:\\Users\\Victus\\OneDrive\\Рабочий стол\\.net\\Task.net\\src\\Domain\\Task.net.Domain.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
